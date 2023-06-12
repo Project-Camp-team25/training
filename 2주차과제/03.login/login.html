@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 폼</title>
+  </head>
+  <body>
+    <header>
+      <h1>로그인 폼</h1>
+    </header>
+    <main>
+      <section>
+        <form action="./index.html" method="get">
+          <div>
+            <label for="username">사용자명 : </label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div>
+            <label for="password">비밀번호 : </label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div>
+            <label for="email">이메일 : </label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="tel">전화번호 : </label>
+            <input type="tel" type="tel" name="tel" required />
+          </div>
+          <div>
+            <label for="auto-login">자동로그인 : </label>
+            <input
+              type="checkbox"
+              id="auto-login"
+              name="auto
+          "
+            />
+            <input type="button" value="초기화" />
+            <input type="submit" value="로그인" />
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
