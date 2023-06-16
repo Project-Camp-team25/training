@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-color: black;
+        overflow: hidden;
+      }
+
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      .gallery p {
+        margin: 0;
+      }
+
+      .list {
+        display: none;
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+      }
+
+      .list img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery" id="gallery">
+      <img
+        id="img1"
+        src="https://media.gettyimages.com/id/1369738887/photo/dua-lipa-performs-onstage-during-the-future-nostalgia-tour-at-ftx-arena-on-february-09-2022.jpg?s=612x612&w=0&k=20&c=uXzq1KKewe1r1bxe3FWMP3qGL2OoE8omLMGSW1GGgFA="
+        alt="Image 1"
+      />
+    </div>
+    <div class="buttonwrapper">
+      <button onclick="changePic(-1)">이전</button>
+      <button onclick="changePic(1)">다음</button>
+      <button onclick="changePicRandom()">랜덤</button>
+    </div>
+  </body>
+  <script>
+    let images = [
+      "https://media.gettyimages.com/id/1307102174/photo/dua-lipa-attends-the-63rd-annual-grammy-awards-at-los-angeles-convention-center-on-march-14.jpg?s=612x612&w=0&k=20&c=JFHnNL02RxYlTpkeCnqhvG1NZwDAa5gVkEzj2FJrQMg=",
+      "https://media.gettyimages.com/id/1314448544/photo/in-this-image-released-on-april-25-dua-lipa-and-sir-elton-john-attend-the-29th-annual-elton.jpg?s=612x612&w=0&k=20&c=UPVDxIZd00iU5o36jIcXsfFzhn32YCeVJ078WMKLzxE=",
+      "https://media.gettyimages.com/id/1161283077/photo/dua-lipa-attends-the-2019-amazon-prime-day-concert-on-july-10-2019-in-new-york-city.jpg?s=612x612&w=0&k=20&c=J8bG4VaTG84v2RkSqePAVbbYLj-uPjYHReCt1bhRGNY=",
+      "https://media.gettyimages.com/id/1011758460/photo/dua-lipa-performs-at-the-osheaga-music-and-art-festival-at-parc-jean-drapeau-on-august-5-2018.jpg?s=612x612&w=0&k=20&c=jL4V7nhydMfdFmY_7LiZ8uHh5vANef5kD_PEKfG3EB0=",
+      "https://media.gettyimages.com/id/911237224/photo/dua-lipa-performs-onstage-during-billboard-and-mastercard-present-a-night-with-dua-lipa-at.jpg?s=612x612&w=0&k=20&c=rija6WnL_kOWhs7fzPZSYeeydTdg1qh5gmeoo9rGSRs=",
+      "https://media.gettyimages.com/id/1307104439/photo/los-angeles-california-in-this-image-released-on-march-14-dua-lipa-performs-onstage-during.jpg?s=612x612&w=0&k=20&c=GgGp-BXk_Q6Q2rRJQdo5cd_hLDAW55nf9SemiFI6Hmk=",
+      "https://media.gettyimages.com/id/1425077326/photo/singer-dua-lipa-performs-during-her-future-nostalgia-tour-at-parque-salitre-m%C3%A1gico-on.jpg?s=612x612&w=0&k=20&c=5gjEvLs_ySjwioTjWNazeXDpsu6loFn1lcwwEU6zp2M=",
+    ];
+    let currentIndex = 0;
+
+    function changePic(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+
+      let currentImage = document.getElementById("img1");
+      currentImage.src = images[currentIndex];
+    }
+
+    function changePicRandom() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var currentImage = document.getElementById("img1");
+      currentImage.src = images[randomIndex];
+    }
+  </script>
+</html>
