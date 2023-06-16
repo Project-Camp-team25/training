@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 시계</title>
+</head>
+<body>
+    <h1>현재시간은 ?</h1>
+    <div class = "now">
+        
+    </div>
+
+
+    <script>
+        
+        function 실시간알아보기() {
+            const date = new Date();
+            const minutes = date.getMinutes();
+            const hours = date.getHours();
+            const seconds = date.getSeconds();
+            document.querySelector(".now").innerHTML = `${hours}:${minutes}:${seconds}`
+        }
+
+        function 실시간() {
+            실시간알아보기();
+            setInterval(실시간알아보기, 1000);
+        }
+
+        실시간();
+
+      
+    </script>
+</body>
+</html>
