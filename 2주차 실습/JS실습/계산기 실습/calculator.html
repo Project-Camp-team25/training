@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 계산기 만들기 </h1>
+    <h3>덧셈 계산기</h3>
+    <input class = "num1"
+    type="number", 
+    value ="" >
+    +
+    <input class ="num2"
+    type ="number", 
+    value ="",>
+
+    <button onClick ="add()">계산</button>
+    <p id = "result"></p>
+
+    <script>
+        function add(){
+            num1 = document.querySelector(".num1").value;
+            num2 = document.querySelector(".num2").value;
+            sum =  parseInt(num1)+ parseInt(num2);
+            document.querySelector("#result").innerHTML= sum;
+            console.log(sum);
+        }
+    </script>
+</body>
+</html>
