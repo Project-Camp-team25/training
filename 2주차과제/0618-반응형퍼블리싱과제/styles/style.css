@@ -236,7 +236,8 @@ header {
   border-radius: 16px;
   display: flex;
   flex-flow: column nowrap;
-  padding-left: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 30px;
 }
 
