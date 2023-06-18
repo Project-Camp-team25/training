@@ -1,0 +1,211 @@
+@import url(./normalize.css);
+@import url(./base.css);
+@import url(./theme.css);
+
+/* 기본 스타일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 숨김 콘텐츠 */
+.a11y-hidden,
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* for legacy browers */
+  /* clip: rect(0 0 0 0); */
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* 버튼 기본 css 없애기 */
+button {
+  border: 0;
+  padding: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  width: 1920px;
+  height: 8062px;
+  margin: 0 auto;
+}
+
+header,
+section,
+main,
+footer {
+  width: 1920px;
+}
+
+header {
+  height: 70px;
+}
+
+.header-container {
+  width: 974px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+
+.btn-container {
+  height: 36px;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.inquiry-btn {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-right: 32px;
+}
+
+.info {
+  height: 1426px;
+  margin-top: 72px;
+}
+
+.section-title {
+  width: 990px;
+  height: 58px;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--dark-green);
+  margin: 0 auto;
+  margin-top: 125px;
+  text-align: center;
+}
+
+.info-container {
+  width: 974px;
+  height: 513px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 53px;
+}
+
+.info-card {
+  height: 390px;
+  padding-left: 20px;
+}
+
+.info-title {
+  margin-top: 16px;
+  font-size: 1.3125rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.info-content {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--light-gray);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.page-btn {
+  width: 151px;
+  height: 25px;
+}
+
+.how-container {
+  width: 974px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 69px;
+}
+
+.how-box {
+  width: 293px;
+  height: 141px;
+  margin-bottom: 48px;
+}
+
+.how-num {
+  font-weight: 400;
+  font-size: 1.3125rem;
+  color: var(--dark-green);
+  margin-bottom: 9px;
+}
+
+/* medium 400 */
+
+.how-title {
+  font-weight: bold;
+  font-size: 1.3125rem;
+  margin-bottom: 16px;
+}
+
+.how-content {
+  color: var(--light-gray);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.skill {
+  margin-top: 152px;
+}
+
+.skill-container {
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.skill-card {
+  width: 1000px;
+  height: 824px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+
+.skill-subtitle {
+  color: var(--dark-green);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.skill-card-content {
+  width: 485px;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 42px;
+  height: 116px;
+}
+
+.skill-content {
+  height: 80px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--light-gray);
+}
