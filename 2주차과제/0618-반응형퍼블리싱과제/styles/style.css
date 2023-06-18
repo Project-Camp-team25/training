@@ -53,6 +53,8 @@ footer {
   width: 1920px;
 }
 
+/* header */
+
 header {
   height: 70px;
 }
@@ -78,6 +80,8 @@ header {
   margin-right: 32px;
 }
 
+/* info */
+
 .info {
   height: 1426px;
   margin-top: 72px;
@@ -87,7 +91,7 @@ header {
   width: 990px;
   height: 58px;
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--dark-green);
   margin: 0 auto;
   margin-top: 125px;
@@ -117,7 +121,7 @@ header {
 
 .info-content {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--light-gray);
 }
 
@@ -130,19 +134,22 @@ header {
   height: 25px;
 }
 
+/* how */
+
 .how-container {
   width: 974px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   margin: 0 auto;
   margin-top: 69px;
+  margin-bottom: 25px;
 }
 
 .how-box {
   width: 293px;
   height: 141px;
   margin-bottom: 48px;
+  margin-right: 31px;
 }
 
 .how-num {
@@ -162,9 +169,11 @@ header {
 
 .how-content {
   color: var(--light-gray);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
 }
+
+/* skill */
 
 .skill {
   margin-top: 152px;
@@ -183,7 +192,7 @@ header {
   height: 824px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 72px;
+  padding-bottom: 72px;
 }
 
 .skill-subtitle {
@@ -206,6 +215,97 @@ header {
 .skill-content {
   height: 80px;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--light-gray);
+}
+
+.price-container {
+  width: 1100px;
+  height: 529px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 37px;
+}
+
+.price-box {
+  width: 340px;
+  height: 401px;
+  background-color: var(--white-gray);
+  border-radius: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 24px;
+  padding-top: 30px;
+}
+
+.price-title {
+  height: 58px;
+  font-weight: 600;
+  font-size: 24px;
+  height: 58px;
+}
+
+.price-content {
+  height: 57px;
+  margin-top: 28px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--light-gray);
+}
+
+.how-price {
+  margin-top: 38px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--dark-green);
+  margin-bottom: 15px;
+}
+
+.price-detail {
+  color: var(--light-gray);
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.now-start-btn {
+  width: 292px;
+  height: 64px;
+}
+
+/* review */
+
+.review {
+  margin-bottom: 72px;
+}
+
+.review-container {
+  height: 495px;
+  margin-top: 37px;
+}
+
+/* swiper.js 사용해야 함. */
+
+/* footer */
+
+.footer-container {
+  width: 974px;
+  height: 159px;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 auto;
+}
+
+.footer-title {
+  margin-top: 26px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.footet-content {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--light-gray);
+  height: 72px;
 }
