@@ -1,0 +1,33 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.movie-item {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.movie-item h3 {
+  margin-top: 0;
+}
+
+.movie-item p {
+  margin-bottom: 5px;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
