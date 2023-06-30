@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습13-1</title>
+</head>
+<body>
+  <script>
+    // 제어문 - 반복문 - for
+    let array = [10, 20, 30, 40, 50];
+    let i = 0
+    for (; i < array.length;) {
+      document.write(array[i], '<br>');
+       i++;
+    }
+
+    array.forEach(e => console.log(e*3));
+
+    for (let variable in array) {
+      console.log(variable)
+      document.write(array[variable], '<br>');
+    }
+
+    for (let variable of array) {
+      document.write(variable, '!! <br>');
+    }
+  </script>
+</body>
+</html>

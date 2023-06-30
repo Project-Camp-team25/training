@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습9-2</title>
+</head>
+<body>
+  <script>
+    // 다차원 배열
+    let score = [
+                 // 1반
+                 [[10, 20, 30, 40, {name:'leehojun', age:10}],[20, 30, 40, 50, 60]],
+                 // 2반
+                 [[10, 20, 30, 40, 50],[20, 30, 40, 50, 60]],
+               ];
+
+      document.write(score[0][0][4]['age']);
+      document.write('<br>');
+      // matrix
+      let m = [[1, 2, 3],
+               [1, 2, 3],
+               [1, 2, 3]]
+
+      document.write(m + m);
+  </script>
+</body>
+</html>

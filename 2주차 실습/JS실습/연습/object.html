@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const JW = {
+            firstName: "Jiwon",
+            lastName: "Seo",
+            age: 27,
+            eyeColor: "black",
+            fullName : function() {
+                return this.firstName + "" + this.lastName;
+            },
+        };
+        console.log(JW);
+        console.log(JW.firstName);
+        console.log(JW.lastName);
+        console.log(JW.age);
+        console.log(JW.fullName());
+        
+        let text = "ABCDEFGHIJKLMNOPQRSTUV";
+        let length = text.length;
+        console.log(length);
+
+        let text1 = "Apple, Banana, Kiwi";
+        let part = text1.slice(7,13);
+        console.log(part);
+
+        let text2 = "please visit Microsoft!";
+        let newText = text2.replace("Microsoft!", "Jiwon");
+        console.log(newText);
+
+        let text3 = "Hello World";
+        let uptext3 = text3.toUpperCase();
+        console.log(uptext3);
+
+        let text4 = "Hello";
+        let text5 = "World";
+        let text6 = text4.concat(" ", text5);
+        console.log(text6);
+
+        let tex = "please locate where 'locate'"
+        let index = text.lastIndexOf("locate");
+        console.log(index);
+
+        let T1 = `Hello World!`;
+        let F = "John";
+        let L = "Doe";
+        let T = `Welcome ${F}, ${L}!`;
+        console.log(T);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ironMan = {
+            name: "토니스타크",
+            actor: "로버트 다우니 주니어",
+            alias:'아이언맨'
+        }
+
+        const{name, actor, alias} = ironMan;
+        console.log(name);
+        console.log(actor);
+        console.log(alias);
+
+        const onChange = (e) => {
+            const{target:{value}} = e;
+            console.log(value);
+        }
+        // console.log(e.target.value);
+    </script>
+</body>
+</html>

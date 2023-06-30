@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습7-1</title>
+</head>
+<body>
+  <script>
+    //지역변수 전역변수
+    let z = 100;
+    function sum(x){ //x는 매개변수(parameter)이면서 지역변수(local val)
+      let y = 50; //y는 지역변수
+      z = z + y;
+      return x + y;
+    }
+    document.write(sum(10));//10은 전달인자(argument)
+    document.write('<br>');
+    document.write(z);
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습12-1</title>
+</head>
+<body>
+  <script>
+    // 제어문 - if, else if, else
+    let x = 3;
+     let y = 7;
+     if(x == y){
+       document.write('if문으로 실행되었습니다.');
+     } else{
+       document.write('else문으로 실행되었습니다.');
+     }
+     
+    x == 4 ?
+    document.write('if문으로 실행되었습니다.<br>') :
+    document.write('else문으로 실행되었습니다.<br>')
+
+    // let result = x == 3 ? true : false;
+    let result = x == 4 ? 100 : 200;
+    document.write(result)
+
+    document.write('<br>');
+
+    let score = 91;
+    let money = 1000;
+    score > 90 ? money += 100000 :
+    score > 80 ? money += 10000 :
+    score > 70 ? money += 1000 : money = 0
+
+    document.write(money);
+  </script>
+</body>
+</html>

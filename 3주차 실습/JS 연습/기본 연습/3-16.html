@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습10</title>
+</head>
+<body>
+  <script>
+    // String
+    let txt = 'ABCDEFGHIJKABC';
+    let txt_two = 'welcome \'hello world\'';
+
+    document.write(`txt : ${txt} <br>`);
+    document.write(`txt.length : ${txt.length} <br>`);
+    document.write(`txt[1] : ${txt[1]} <br>`);
+    document.write(`txt_two : ${txt_two} <br>`);
+
+    document.write(`txt.indexOf : ${txt.indexOf("F")} <br>`);
+    document.write(`txt.search : ${txt.search("FGH")} <br>`);
+    document.write(`txt.lastIndexOf : ${txt.lastIndexOf("Z")} <br>`);
+    document.write(`txt.slice(0, 3) : ${txt.slice(0, 3)} <br>`);
+    document.write(`txt.substring(0, 3) : ${txt.substring(0, 3)} <br>`);
+    document.write(`txt.substr(2, 5) : ${txt.substr(2, 5)} <br>`);
+
+    document.write(`txt.replace('ABC', 'donghun') : ${txt.replace(/ABC/g, 'donghun')} <br>`);
+
+
+    document.write(`txt.toUpperCase() : ${txt.toUpperCase()} <br>`);
+    document.write(`txt.toLowerCase() : ${txt.toLowerCase()} <br>`);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+  </head>
+  <body>
+    <h1 id="father"></h1>
+    <h1 id="mother"></h1>
+    <script>
+      function Person(first, last, age, eyecolor) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyecolor;
+        // this.nationality = "English";
+      }
+
+      const myFather = new Person("John", "Doe", 50, "blue");
+      const myMother = new Person("Sally", "Rally", 48, "green");
+
+      const father = document.getElementById("father");
+      const mother = document.getElementById("mother");
+      father.innerHTML = `${myFather.firstName} 나이는 ${myFather.age} 입니다.`;
+      mother.innerHTML = `${myMother.firstName} 나이는 ${myMother.age} 입니다.`;
+    </script>
+  </body>
+</html>

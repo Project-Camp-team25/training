@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백</title>
+  </head>
+  <body>
+    <p>3초만 기다려보세요!</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+      // 예시1)
+      //   setTimeout(myFunction, 3000);
+
+      //   function myFunction() {
+      //     document.getElementById("demo").innerHTML = "I love You !!";
+      //   }
+
+      // 예시2)
+      //       setTimeout(function() { myFunction("I love You !!!"); }, 3000);
+
+      // function myFunction(value) {
+      //   document.getElementById("demo").innerHTML = value;
+      // }
+
+      // 예시3)
+      setInterval(myFunction, 1000);
+
+      function myFunction() {
+        let d = new Date();
+        document.getElementById("demo").innerHTML =
+          d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      }
+    </script>
+  </body>
+</html>

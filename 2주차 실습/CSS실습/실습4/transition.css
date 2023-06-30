@@ -1,0 +1,107 @@
+.section-all{
+     margin: 32px 0px 0px;
+
+}
+
+.section-text{
+    display: flex;
+    justify-content: space-between; 
+}
+.article {
+    width: 320px;
+    height: 230px;
+    padding:1rem;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+}
+.section-main {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.section-card{
+    width: 320px;
+}
+
+.article-text3{
+    font-size: 16px;
+    margin: 4px;
+    width: 288px;
+    height: 48px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.2;
+    height: 3.6em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #000000;
+}
+
+.article-text2{
+    background-color: #DCFCE7;
+    padding: 2px, 8px;
+    box-sizing: border-box;
+    border: 1px solid  #DCFCE7;
+    color: #16A34A;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 12px;
+    margin: 4px 0px 0px;
+    width: 288px;
+    height: 48px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.2;
+    height: 3.6em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #9CA3AF;
+}
+
+.article-text4 {
+    display: flex;
+    justify-content:space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+}
+
+.article-text5{
+    font-size: 12px;
+    background-color: #F3F4F6;
+    color: #6B7280;
+    border-radius: 9999px;
+}
+
+.article-text6{
+    font-size: 12px;
+}
+
+.article-text7{
+    display: flex; /* Flex 컨테이너로 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    color:white;
+    background-color: #3B82F6;
+    width: 288px;
+    height: 36px;
+    border-radius: 10px;
+}

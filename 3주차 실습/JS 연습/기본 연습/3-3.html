@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습3</title>
+</head>
+<body>
+  <script>
+    //연산
+    let name = prompt("이름을 입력해주세요.")
+    let age = prompt("나이를 입력해주세요.")
+
+    let x, y, z;
+    x = 5;
+    y = 9;
+    y++; //10
+    x--; //4
+    --x; //3
+    ++x; //4
+    x = x + 2; //6
+    x += 2; //8
+    document.write(x, '<br>');
+    x *= 2; //16
+    document.write(x);
+
+    document.write('<br>');
+    document.write('제 이름은 ' + name + ' 제 나이는 ' + age + '입니다.')
+    document.write('<br>');
+    document.write(`제 이름은 ${name}입니다. 제 나이는 ${age+age} 입니다.`)
+    document.write('<br>');
+    
+    console.log(typeof age)
+    age = Number(age)
+    console.log(typeof age)
+    document.write(`제 이름은 ${name}입니다. 제 나이는 ${age+age} 입니다.`)
+  </script>
+</body>
+</html>

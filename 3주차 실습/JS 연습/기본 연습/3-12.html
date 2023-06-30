@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습8</title>
+</head>
+<body>
+  <script>
+    function sum(x, y){
+      return x + y;
+    }
+    //object
+    let person = {
+      //key: value
+      name: '정동훈',
+      age: 20,
+      height : 30,
+      weight : 50,
+      career : {'첫번째직장' : '하나', '두번째직장' : '둘'},
+      func : sum
+    }
+    person.belong = '세이프홈즈';
+
+    document.write(`제 이름은 ${person.name} 입니다. <br>`);
+    document.write(`제 나이는 ${person.age} 입니다. <br>`);
+    document.write(`제 키는 ${person.height} 입니다. <br>`);
+
+    document.write(`제 이름은 ${person['name']} 입니다. <br>`);
+    document.write(`제 나이는 ${person['age']} 입니다. <br>`);
+    document.write(`제 키는 ${person['height']} 입니다. <br>`);
+
+    document.write(`제 소속는 ${person['belong']} 입니다. <br>`);
+    document.write(`제 이력은 ${person['career']['첫번째직장']} 입니다. <br>`);
+    document.write(`제 기능은 ${person['func'](10, 20)} 입니다. <br>`);
+  </script>
+</body>
+</html>

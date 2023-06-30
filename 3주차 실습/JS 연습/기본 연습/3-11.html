@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습7-3</title>
+</head>
+<body>
+  <script>
+    // 함수 선언문
+
+    function sum(x, y){
+      return x + y;
+    }
+
+
+
+    //함수 표현식
+    let sumXY = function(x, y){
+      return x + y;
+    };
+    // let x = 10;
+    // let y = x;
+    let sumXYcopy = sumXY;
+
+    document.write(sumXYcopy(10, 20), '<br>');
+
+    //콜백함수 ==> 인자로 넘겨지는 함수, 함수를 등록하기만 하고 어떤 이벤트가 발생했거나 특정 시점에 도달했을 때 시스템에서 호출하는 함수
+    function sum(x, y, c){
+      c(x + y);
+      return x + y;
+    }
+
+    function documentWrite(s){
+      document.write('콜백함수', s);
+    }
+
+    sum(10, 20, documentWrite)
+  </script>
+</body>
+</html>
