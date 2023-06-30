@@ -26,20 +26,9 @@ function useFetchMovies(url) {
   return { movies, error, loading };
 }
 
-function MovieList() {
-  const [page, setPage] = useState(1); // 현재 페이지 번호
-  const { movies, error, loading } = useFetchMovies(
-    `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year&page=${page}`
-  );
-  const [selectedMovie, setSelectedMovie] = useState(null);
-
-  const handleMovieClick = (movie) => {
-    setSelectedMovie(movie);
-  };
-
-  const closeMovieDetails = () => {
-    setSelectedMovie(null);
-  };
+// Custom Hook: usePagination
+function usePagination(initialPage) {
+  const [page, setPage] = useState(initialPage);
 
   const goToPreviousPage = () => {
     setPage(prevPage => prevPage - 1);
@@ -49,11 +38,54 @@ function MovieList() {
     setPage(prevPage => prevPage + 1);
   };
 
+  return { page, goToPreviousPage, goToNextPage };
+}
+
+function MovieList() {
+  const { page, goToPreviousPage, goToNextPage } = usePagination(1);
+  const { movies, error, loading } = useFetchMovies(
+    `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year&page=${page}`
+  );
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState(null);
+  const [filteredMovies, setFilteredMovies] = useState([]);
+
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+    setSelectedGenre(movie.genres[0]); // 첫 번째 장르 선택
+    setFilteredMovies(movies.filter((m) => m.genres.includes(movie.genres[0])));
+  };
+
+  const closeMovieDetails = () => {
+    setSelectedMovie(null);
+  };
+
+  useEffect(() => {
+    if (selectedGenre) {
+      setFilteredMovies(movies.filter((movie) => movie.genres.includes(selectedGenre)));
+    } else {
+      setFilteredMovies(movies);
+    }
+  }, [movies, selectedGenre]);
+
   return (
     <div>
       <h1>Movie List</h1>
       <h3>금주의 영화</h3>
       <h3>이미지를 클릭해서 상세 내용을 확인하세요!</h3>
+
+      <div className="genre-filter">
+        <h3>장르 필터:</h3>
+        <select value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+          <option value="">전체</option>
+          {movies.map((movie) => (
+            movie.genres.map((genre, index) => (
+              <option key={index} value={genre}>{genre}</option>
+            ))
+          ))}
+        </select>
+      </div>
+
       <div className='movie-list'>
         <div className='movie-grid'>
           {loading ? (
@@ -61,7 +93,7 @@ function MovieList() {
           ) : error ? (
             <p>Error occurred: {error.message}</p>
           ) : (
-            movies.map((movie) => (
+            filteredMovies.map((movie) => (
               <div key={movie.id} onClick={() => handleMovieClick(movie)}>
                 <img src={movie.medium_cover_image} alt={movie.title} width={300} height={400} />
               </div>
@@ -84,14 +116,16 @@ function MovieList() {
         </div>
       )}
 
-      <div className="pagination">
-        <button className='pagination-btn' disabled={page === 1} onClick={goToPreviousPage}>
-          Previous Page
-        </button>
-        <button className='pagination-btn' onClick={goToNextPage}>Next Page</button>
-      </div>
+      {!loading && !error && (
+        <div className="pagination">
+          <button className='pagination-btn' disabled={page === 1} onClick={goToPreviousPage}>
+            Previous Page
+          </button>
+          <button className='pagination-btn' onClick={goToNextPage}>Next Page</button>
+        </div>
+      )}
     </div>
   );
 }
 
-export default MovieList
+export default MovieList;
