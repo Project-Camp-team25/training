@@ -1,0 +1,55 @@
+h1 {
+    display:flex;
+    justify-content: center;
+
+}
+
+h3 {
+    display:flex;
+    justify-content: center;
+}
+
+.movie-list {
+    display: grid;
+    justify-items: center; /* 열 내에서 가운데 정렬 */
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열 생성 */
+    justify-items: center; /* 열 내에서 가운데 정렬 */
+    align-items: center;
+    row-gap: 0px;
+    column-gap: 0px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    display: flex; 
+    width: 700px; /* 원하는 너비로 설정 */
+    height: 400px; /* 원하는 높이로 설정 */
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .modal-img {
+    margin-top: 20px;
+  }
+
+  .model-txt{
+    margin-left: 30px;
+    width: 470px;
+    height: 160px;
+  }
